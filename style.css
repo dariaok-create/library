@@ -1,0 +1,595 @@
+/* ========== БИБЛИОТЕКА — КНИЖНЫЙ СТИЛЬ ========== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fdfaf5;
+    color: #3d2b1f;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+    background: #4a2c1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(74, 44, 26, 0.3);
+}
+
+.header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 25px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #f5e6d3;
+    text-transform: uppercase;
+}
+
+.logo-img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.header nav div {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header a {
+    text-decoration: none;
+    color: #d4c4a8;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s;
+}
+
+.header a:hover {
+    color: #f5e6d3;
+}
+
+.cart-link {
+    color: #f5e6d3 !important;
+    font-weight: 600 !important;
+}
+
+/* ===== ГЛАВНЫЙ ЭКРАН ===== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+    align-items: center;
+    background: linear-gradient(135deg, #f5ede1 0%, #e8dcc8 50%, #f0e6d5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    padding: 60px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #4a2c1a;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    font-size: 17px;
+    color: #6b4d3a;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.hero-image {
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+    display: inline-block;
+    background: #6b3a2a;
+    color: #fff;
+    padding: 14px 38px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    background: #4a2c1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 44, 26, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #4a2c1a;
+    border: 2px solid #6b3a2a;
+}
+
+.btn-outline:hover {
+    background: #6b3a2a;
+    color: #fff;
+}
+
+/* ===== СЕКЦИИ ===== */
+.featured, main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.featured h2, main h1, .section-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #4a2c1a;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.featured h2::after, .section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #6b3a2a;
+    margin: 12px auto 0;
+}
+
+/* ===== КАРТОЧКИ КНИГ (СЕТКА) ===== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(74, 44, 26, 0.1);
+    border: 1px solid #d4c4a8;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(74, 44, 26, 0.2);
+    border-color: #6b3a2a;
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+    background: #f5ede1;
+}
+
+.product-card:hover img {
+    transform: scale(1.03);
+}
+
+.product-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #4a2c1a;
+    margin: 14px 14px 4px;
+}
+
+.product-card .category {
+    font-size: 11px;
+    color: #6b4d3a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 14px 8px;
+}
+
+.product-card .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b3a2a;
+    margin: 0 14px 14px;
+}
+
+.product-card .btn {
+    margin: auto 14px 14px;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+}
+
+/* ===== КАТАЛОГ ===== */
+.search-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.search-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 13px 20px;
+    border: 2px solid #d4c4a8;
+    border-radius: 6px;
+    font-size: 13px;
+    background: #fff;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-input:focus {
+    border-color: #6b3a2a;
+    box-shadow: 0 0 10px rgba(107, 58, 42, 0.1);
+}
+
+.search-btn {
+    padding: 13px 26px;
+    background: #6b3a2a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-btn:hover {
+    background: #4a2c1a;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.filters-sidebar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #d4c4a8;
+    position: sticky;
+    top: 100px;
+}
+
+.filters-header {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4c4a8;
+}
+
+.filters-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: #4a2c1a;
+    letter-spacing: 2px;
+}
+
+.filter-group {
+    margin-bottom: 14px;
+}
+
+.filter-group h3 {
+    font-size: 11px;
+    color: #6b4d3a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #3d2b1f;
+}
+
+.checkbox-label input { display: none; }
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d4c4a8;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.checkbox-label input:checked + .checkmark {
+    background: #6b3a2a;
+    border-color: #6b3a2a;
+}
+
+.checkbox-label input:checked + .checkmark:after {
+    content: '✓';
+    color: #fff;
+    font-size: 10px;
+}
+
+.apply-filters {
+    width: 100%;
+    padding: 10px;
+    background: #6b3a2a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.apply-filters:hover {
+    background: #4a2c1a;
+}
+
+.products-results {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #d4c4a8;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4c4a8;
+}
+
+/* ===== ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ ===== */
+.shop-now {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(135deg, #f5ede1, #e8dcc8);
+}
+
+.shop-now-image { height: 450px; overflow: hidden; }
+.shop-now-image img { width: 100%; height: 100%; object-fit: cover; }
+.shop-now-text { padding: 60px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+.shop-now-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #4a2c1a; letter-spacing: 4px; }
+
+.banners {
+    max-width: 1200px; margin: 40px auto; padding: 0 20px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+
+.banner {
+    height: 280px; border-radius: 8px; overflow: hidden;
+    border: 1px solid #d4c4a8; position: relative;
+}
+
+.banner img { width: 100%; height: 100%; object-fit: cover; }
+
+.banner-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(74, 44, 26, 0.15);
+    display: flex; align-items: center; justify-content: center;
+}
+
+.banner-overlay span {
+    background: rgba(255,255,255,0.9); padding: 12px 28px;
+    border-radius: 6px; font-weight: 600; color: #4a2c1a;
+    letter-spacing: 2px; font-size: 13px;
+}
+
+.advantages {
+    max-width: 1200px; margin: 50px auto; padding: 0 20px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; text-align: center;
+}
+
+.advantage-item {
+    background: #fff; padding: 25px 18px; border-radius: 8px;
+    border: 1px solid #d4c4a8; box-shadow: 0 4px 18px rgba(74, 44, 26, 0.08);
+}
+
+.advantage-item h4 { color: #4a2c1a; }
+.advantage-item p { color: #6b4d3a; }
+
+.product-detail {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 35px;
+    background: #fff; padding: 28px; border-radius: 8px;
+    border: 1px solid #d4c4a8; margin-top: 10px;
+}
+
+.product-image img { width: 100%; border-radius: 6px; }
+.product-info h1 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #4a2c1a; }
+.product-price { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #6b3a2a; font-weight: 600; margin: 14px 0; }
+
+.add-form {
+    background: #fdfaf5; padding: 18px; border-radius: 6px; border: 1px solid #d4c4a8; margin: 18px 0;
+}
+
+.add-form select {
+    padding: 10px 14px; border: 2px solid #d4c4a8; border-radius: 6px;
+    margin-right: 8px; font-family: 'Montserrat', sans-serif;
+}
+
+.auth-form {
+    max-width: 460px; margin: 40px auto; background: #fff;
+    padding: 32px; border-radius: 8px; border: 1px solid #d4c4a8;
+}
+
+.auth-form h1 { font-family: 'Cormorant Garamond', serif; text-align: center; color: #4a2c1a; margin-bottom: 22px; }
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-size: 11px; color: #6b4d3a; text-transform: uppercase; letter-spacing: 1.5px; }
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: 11px 14px; border: 2px solid #d4c4a8;
+    border-radius: 6px; font-size: 13px; background: #fdfaf5; outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #6b3a2a;
+}
+
+.cart-item {
+    display: flex; gap: 18px; align-items: center;
+    background: #fff; padding: 18px; border-radius: 8px;
+    margin-bottom: 8px; border: 1px solid #d4c4a8;
+}
+
+.cart-item img { width: 80px; height: 120px; object-fit: cover; border-radius: 4px; }
+
+.cart-total {
+    background: #fff; padding: 18px; border-radius: 8px;
+    border: 1px solid #d4c4a8; margin-top: 12px; text-align: right;
+}
+
+.newsletter {
+    max-width: 500px; margin: 50px auto; padding: 32px; text-align: center;
+    background: #fff; border-radius: 8px; border: 1px solid #d4c4a8;
+}
+
+.newsletter form { display: flex; gap: 8px; }
+.newsletter input { flex: 1; padding: 11px 15px; border: 2px solid #d4c4a8; border-radius: 6px; font-family: 'Montserrat', sans-serif; }
+.newsletter button { padding: 11px 22px; background: #6b3a2a; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+
+.success-msg { background: #e8f5e9; padding: 14px; border-radius: 6px; border-left: 4px solid #4caf50; margin: 10px 0; font-size: 12px; }
+.error { background: #fdecea; padding: 14px; border-radius: 6px; border-left: 4px solid #e74c3c; margin: 10px 0; font-size: 12px; color: #8b3a3a; }
+.back-link { display: inline-block; margin-bottom: 10px; color: #6b4d3a; text-decoration: none; font-size: 12px; letter-spacing: 1px; }
+
+footer {
+    background: #4a2c1a; text-align: center; padding: 20px;
+    color: #d4c4a8; font-size: 10px; letter-spacing: 2px; margin-top: 60px;
+}
+
+/* ===== КНОПКА В ИЗБРАННОМ ===== */
+.fav-remove-btn {
+    background: #6b3a2a !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    font-family: 'Montserrat', sans-serif !important;
+    transition: all 0.3s ease !important;
+}
+
+.fav-remove-btn:hover {
+    background: #3d1f0f !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 1024px) {
+    .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 800px) {
+    .main-content { grid-template-columns: 1fr; }
+    .filters-sidebar { display: none; }
+}
+
+@media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-image { height: 350px; order: -1; }
+    .hero-text { padding: 30px 25px; text-align: center; }
+    .hero-text h1 { font-size: 36px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .shop-now { grid-template-columns: 1fr; }
+    .banners { grid-template-columns: 1fr; }
+    .advantages { grid-template-columns: 1fr; }
+    .product-detail { grid-template-columns: 1fr; }
+    .header nav { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+    .products-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .product-card img { height: 280px; }
+}
